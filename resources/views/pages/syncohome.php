@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US" ng-app="synco">
 <head>
+	<title>Synco Message Board</title>
+	<!-- Load Bootstrap -->
+	<link href="<? asset('css/bootstrap.min.css') ?>" rel="stylesheet">
 </head>
 <body>
 
@@ -13,25 +16,33 @@
 <!{{ Auth::check() ? "Logged In" : "Logged Out" }}>
 
 
-<table border='1'>
-	<tr>
-		<td>Title</td>
-		<td>Post Text</td>
-		<td>Comments</td>
-		<td>Upvotes</td>
-		<td>Downvotes</td>
-		<td>Score</td>
-	</tr>
-	<tr ng-repeat="x in posts | limitTo:howMany">
-	    <td>{{ x.about.title }}</td>
-	    <td>{{ x.about.ptext }}
-	    <td>{{ x.about.num_comments }}
-	    <td>{{ x.about.upvotes }}</td>
-	    <td>{{ x.about.downvotes }}</td>
-	    <td>{{ x.about.post_score }}</td>
-	</tr>
-</table		
-</table
+<table class="table">
+	<thead>	
+		<tr>
+			<td>Title</td>
+			<td>Post Text</td>
+			<td>Comments</td>
+			<td>Upvotes</td>
+			<td>Downvotes</td>
+			<td>Score</td>
+		</tr>
+	</thead>
+	<tbody>	
+		<tr ng-repeat="x in posts | limitTo:howMany">
+		    <td>
+		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
+		    	<button class="btn btn-default btn-xs btn-up" >Downvote</button>
+		    </td>
+		    <td>{{ x.about.title }}</td>
+		    <td>{{ x.about.ptext }}
+		    <td>{{ x.about.num_comments }}
+		    <td>{{ x.about.upvotes }}</td>
+		    <td>{{ x.about.downvotes }}</td>
+		    <td>{{ x.about.post_score }}</td>
+		</tr>
+	</tbody>
+</table>	
+
 
 </div>
 <!-- Javascript libraries -->
