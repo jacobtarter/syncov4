@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US" ng-app="synco">
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
 <body>
 
-<div ng-app="synco" ng-controller="angPostController">
+<div ng-controller="angPostController">
 
 <p style="font-size: 24px"><b>Synco!</b></p>
 
@@ -34,12 +34,11 @@
 </table
 
 </div>
-
+<!-- Javascript libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!-- AngularJS Scripts -->
 <script src="<?= asset('angularjs/app.js') ?>"></script>
 <script src="<?= asset('angularjs/controllers/angPostController.js') ?>"></script>
-
-</head>
 </body>
 </html>
 

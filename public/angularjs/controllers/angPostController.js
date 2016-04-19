@@ -1,8 +1,8 @@
-app.controller('postController', function($scope, $http, API_URL) {
+app.controller('angPostController', function($scope, $http, API_URL) {
 
 	$http.get(API_URL + "posts")
-		.success(function(resonse){
-			$scope.posts = response.data;
+		.success(function(response){
+			$scope.posts = response;
 		});
 
 });
