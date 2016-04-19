@@ -38,7 +38,7 @@ Route::group(['middleware' => ['web']], function () {
 	AND p.pid = '$pid';
 ";	
 
-	$DATA = (array)DB::select( "$WHERE", ['pid => 1']);
+	$DATA = (array)DB::select( "$WHERE" );
 	
 	$postsFinal = array();
 	$comments = array();
