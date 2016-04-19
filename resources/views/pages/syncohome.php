@@ -20,12 +20,12 @@
 	<thead>	
 		<tr>
 			<th></th>
+			<th>Score</th>
+			<th>Upvotes</th>
+			<th>Downvotes</th>
 			<th>Title</th>
 			<th>Post Text</th>
 			<th>Comments</th>
-			<th>Upvotes</th>
-			<th>Downvotes</th>
-			<th>Score</th>
 		</tr>
 	</thead>
 	<tbody>	
