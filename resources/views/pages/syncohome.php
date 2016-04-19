@@ -36,8 +36,8 @@
 </div>
 
 <!-- AngularJS Scripts -->
-<script src="<?= asset('app/app.js') ?>"></script>
-<script src="<?= asset('app/controllers/angPostController.js') ?>"></script>
+<script src="angularjs/controllers/angPostController"></script>
+<script src="angularjs/app.js"></script>
 
 </head>
 </body>
