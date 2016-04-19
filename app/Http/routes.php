@@ -33,8 +33,8 @@ Route::group(['middleware' => ['web']], function () {
 	SELECT p.pid, p.title, p.ptext, p.uid, p.created_at, c.cid, c.c_pid, c.ctext, c.uid, c.created_at, v.vid, v.votescore, v.v_pid, v.uid, v.created_at
 	FROM posts p 
 	LEFT JOIN comments c ON p.pid = c.c_pid
-	LEFT JOIN votes v ON p.pid = v.v_pid;
-	WHERE p.pid = :pid
+	LEFT JOIN votes v ON p.pid = v.v_pid
+	WHERE p.pid = :pid;
 ";	
 
 	$DATA = (array)DB::select( "$WHERE", ['pid => 1']);
