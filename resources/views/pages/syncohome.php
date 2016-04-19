@@ -19,13 +19,13 @@
 <table class="table">
 	<thead>	
 		<tr>
-			<td></td>
-			<td>Title</td>
-			<td>Post Text</td>
-			<td>Comments</td>
-			<td>Upvotes</td>
-			<td>Downvotes</td>
-			<td>Score</td>
+			<th></th>
+			<th>Title</th>
+			<th>Post Text</th>
+			<th>Comments</th>
+			<th>Upvotes</th>
+			<th>Downvotes</th>
+			<th>Score</th>
 		</tr>
 	</thead>
 	<tbody>	
@@ -34,12 +34,14 @@
 		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
 		    	<button class="btn btn-default btn-xs btn-up" >Downvote</button>
 		    </td>
+		    <td>{{ x.about.post_score }}</td>
+		    <td>{{ x.about.upvotes }}</td>
+		    <td>{{ x.about.downvotes }}</td>
 		    <td>{{ x.about.title }}</td>
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
-		    <td>{{ x.about.upvotes }}</td>
-		    <td>{{ x.about.downvotes }}</td>
-		    <td>{{ x.about.post_score }}</td>
+		    
+		    
 		</tr>
 	</tbody>
 </table>	
