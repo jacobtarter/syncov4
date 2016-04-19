@@ -19,6 +19,7 @@
 <table class="table">
 	<thead>	
 		<tr>
+			<td></td>
 			<td>Title</td>
 			<td>Post Text</td>
 			<td>Comments</td>
