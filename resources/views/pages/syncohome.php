@@ -4,7 +4,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body>
 
-<div ng-app="myApp" ng-controller="syncoCtrl">
+<div ng-app="synco" ng-controller="angPostController">
 
 <p style="font-size: 24px"><b>Synco!</b></p>
 
@@ -34,18 +34,11 @@
 </table
 
 </div>
-<script>
-	var app = angular.module('myApp', []);
-	app.controller('syncoCtrl', function($scope, $http) 
-	{
-		$http.get("http://www.synco.xyz/v1/posts")
-	  	.then(function (response) 
-	  	{
-	 		$scope.posts = response.data;
-	 	
-	    });	 	
-	    });		    
-</script>
+
+<!-- AngularJS Scripts -->
+<script src="<?= asset('app/app.js') ?>"></script>
+<script src="<?= asset('app/controllers/angPostController.js') ?>"></script>
+
 </head>
 </body>
 </html>
