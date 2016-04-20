@@ -218,5 +218,11 @@ class PostController extends Controller
         $affected = Post::where('pid', '=', $pid)->delete();
         return $affected;
     }
+
+    public function test($pid)
+    {
+        $result = Post::where('pid', '=', $pid);
+        return $result;
+    }
     
 }
