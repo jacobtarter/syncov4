@@ -1,5 +1,7 @@
 app.controller('ViewPostController', function($scope, $http, API_URL) {
 
+	$scope.post = null;
+
 	//Get Posts Method
 
 	$http.get(API_URL + "posts")
