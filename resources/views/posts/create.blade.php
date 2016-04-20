@@ -4,7 +4,7 @@
 <html>
 <head>
 <body>
-<link rel="text/stylesheet" href="Synco.Css1.3.css" />
+<link rel="text/stylesheet" href="public/Synco.Css1.3.css" />
 <p style="font-size: 24px"><b>Post New Comment!</b></p>
 <script>
 $user = Auth::user();
