@@ -211,7 +211,8 @@ class PostController extends Controller
     
     public function destroy(Request $request) 
     {
-    	$DEL = "DELETE FROM posts WHERE pid= '$request->input('pid')' "
+        $pid = $request->input('pid');
+    	$DEL = "DELETE FROM posts WHERE pid= '$pid' ";
         DB::delete( "$DEL" );
     }
     
