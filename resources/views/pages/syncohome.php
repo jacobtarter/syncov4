@@ -37,7 +37,7 @@
 		    <td>{{ x.about.post_score }}</td>
 		    <td>{{ x.about.upvotes }}</td>
 		    <td>{{ x.about.downvotes }}</td>
-		    <td><p ng-click="post = x.about.pid">{{ x.about.title }}</p></td>
+		    <td><p ng-click="post = {{ x.about.pid }}">{{ x.about.title }}</p></td>
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
 		    
