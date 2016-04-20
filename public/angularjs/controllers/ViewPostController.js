@@ -17,7 +17,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		if (isConfirmDelete)
 		{
 			$http({
-				method: 'DELETE',
+				method: 'GET',
 				url: API_URL + 'posts/delete/' + pid
 			}).
 			success(function(data) {
