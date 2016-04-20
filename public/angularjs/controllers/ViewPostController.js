@@ -26,7 +26,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 			}).
 			error(function(data) {
 				console.log(data);
-				alert('Error - Post not deleted. pid: ' + pid) ;
+				alert('Error - Post not deleted. pid: ' + url) ;
 			});
 		}
 		else
