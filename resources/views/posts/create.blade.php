@@ -13,6 +13,7 @@ if($user)
 document.getElementById("login").innerHTML = "Hello $user->name";
 }
 </script>
+<h1> Test </h1>
 <p id="login"></p>
 {!! Form::open(array('route' => 'posts.store')) !!}
     {{ Form::label('title', 'Title: ') }}
@@ -25,4 +26,3 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 </head>
 </body>
 </html>
-
