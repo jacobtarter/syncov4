@@ -16,15 +16,15 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		var isConfirmDelete = confirm('Are you sure you want to delete this post?');
 		if (isConfirmDelete)
 		{
-			$http({
-				method: 'DELETE',
+			$.ajax({
+				type: 'DELETE',
 				url: API_URL + 'posts/' + pid
 			}).
-			success(function(data) {
+			success(function(affected) {
 				//console.log(data);
 				location.reload();
 			}).
-			error(function(data) {
+			error(function(affected) {
 				//console.log(data);
 				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/' + pid) ;
 			});

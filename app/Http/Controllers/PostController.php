@@ -209,13 +209,14 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function destroy(Request $request, $pid) 
+    public function destroy($pid) 
     {
         //$pid = $request->input('pid');
-    	$post = Post::find($pid);
-        $post->delete();
+    	//$post = Post::find($pid);
+        //$post->delete();
         console.log( "sql: " + $DEL );
-        return "Post deleted with PID: " ;
+        $affected = Post::where('pid', '=', $pid)->delete();
+        return $affected;
     }
     
 }
