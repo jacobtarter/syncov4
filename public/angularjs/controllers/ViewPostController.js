@@ -13,6 +13,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 
 	$scope.confirmDelete = function(pid)
 	{
+		/*
 		var isConfirmDelete = confirm('Are you sure you want to delete this post?');
 		if (isConfirmDelete)
 		{
@@ -33,6 +34,19 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		{
 			return false;
 		}
+		*/
+		function confirmDelete(id) {
+    	if (confirm('Delete this user?')) {
+        $.ajax({
+            type: "DELETE",
+            url: 'posts/' + id, //resource
+            success: function(affectedRows) {
+                //if something was deleted, we redirect the user to the users page, and automatically the user that he deleted will disappear
+                location.reload();
+            }
+        });
+    }
+}
 	}
 
 });

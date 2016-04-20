@@ -209,6 +209,7 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     
+    /*
     public function destroy(Request $request, $pid) 
     {
         //$pid = $request->input('pid');
@@ -219,6 +220,14 @@ class PostController extends Controller
         //console.log( "sql: " + $DEL );
         //$affected = Post::where('pid', '=', $pid)->delete();
         //return $affected;
+    }
+    */
+
+    public function destroy($id)
+    {
+        $affectedRows  = Post::where('id', '=', $id)->delete();
+
+        return $affectedRows;
     }
 
     public function test($pid)
