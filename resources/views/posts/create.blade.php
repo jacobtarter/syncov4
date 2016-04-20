@@ -5,7 +5,7 @@
 <head>
 <body>
 
-<link rel="stylesheet" href="syncov3/public/Synco.Css1.3.css" />
+<link href="{{ asset('SyncoCss1.3.css') }}" rel="stylesheet" type="text/css" >
 
 <p style="font-size: 24px"><b>Post New Comment!</b></p>
 <!--<script>
