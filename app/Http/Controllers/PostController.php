@@ -223,13 +223,13 @@ class PostController extends Controller
     }
     */
 
-    public function destroy(Request $request, $id) 
+    public function destroy($id) 
     { 
         $post = Post::find($id);
 
         $post->delete();
 
-        return "Post record successfully deleted #" . $request->input('id');
+        return "true";
     }
 
     public function test($pid)
