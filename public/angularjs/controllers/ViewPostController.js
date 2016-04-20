@@ -20,11 +20,11 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 				method: 'DELETE',
 				url: API_URL + 'posts/' + pid
 			}).
-			success(function(affected) {
+			success(function(data) {
 				//console.log(data);
 				location.reload();
 			}).
-			error(function(affected) {
+			error(function(data) {
 				//console.log(data);
 				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/' + pid) ;
 			});
