@@ -225,9 +225,8 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        $affectedRows  = Post::where('id', '=', $id)->delete();
-
-        return $affectedRows;
+        $post = Post::find($pid);
+        $post->delete();
     }
 
     public function test($pid)
