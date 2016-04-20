@@ -208,11 +208,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /*
-    public function destroy($pid) 
+    
+    public function destroy(Request $request) 
     {
-    	$DEL = "DELETE FROM posts WHERE pid= '$pid' "
+    	$DEL = "DELETE FROM posts WHERE pid= '$request->input('pid')' "
         DB::delete( "$DEL" );
     }
-    */
+    
 }
