@@ -29,6 +29,11 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		else {
 			return false;
 		}
+
+	$scope.viewPost = function()
+	{
+		return view('viewPost');
+	}
 	
 		
 }
