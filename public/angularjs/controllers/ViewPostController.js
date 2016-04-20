@@ -35,7 +35,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 			return false;
 		}
 		*/
-		function confirmDelete(id) {
+		function (id) {
     	if (confirm('Delete this user?')) {
         $.ajax({
             type: "DELETE",
