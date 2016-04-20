@@ -68,7 +68,7 @@
 "sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- AngularJS Scripts -->
 <script src="<?= asset('angularjs/app.js') ?>"></script>
-<script src="<?= asset('angularjs/controllers/SyncoHomeController.js') ?>"></script>
+<script src="<?= asset('angularjs/controllers/ViewPostController.js') ?>"></script>
 </body>
 </html>
 
