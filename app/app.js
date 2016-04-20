@@ -4,8 +4,8 @@ var app = angular.module('synco', ['ngRoute'])
 app.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
-			when('/ViewOrder/:id', {
-				templateUrl: 'js/show_post.html',
+			when('/ViewOrder/', {
+				templateUrl: '../templates/show_post.html',
 				controller: 'ViewPostController'
 			});
 	}]);

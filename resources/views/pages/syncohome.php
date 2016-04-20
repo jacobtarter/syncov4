@@ -26,7 +26,7 @@
 </script>
 
 
-<div ng-view>
+
 <table class="table">
 	<thead>	
 		<tr>
@@ -62,6 +62,8 @@
 		</tr>
 	</tbody>
 </table>
+
+<div ng-view>
 </div>	
 
 
