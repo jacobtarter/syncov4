@@ -212,16 +212,16 @@ class PostController extends Controller
     public function destroy($pid) 
     {
         //$pid = $request->input('pid');
-    	//$post = Post::find($pid);
-        //$post->delete();
-        console.log( "sql: " + $DEL );
-        $affected = Post::where('pid', '=', $pid)->delete();
-        return $affected;
+    	$post = Post::find($pid);
+        $post->delete();
+        //console.log( "sql: " + $DEL );
+        //$affected = Post::where('pid', '=', $pid)->delete();
+        //return $affected;
     }
 
     public function test($pid)
     {
-        $result = Post::where('pid', '=', $pid);
+        $result = Post::find($pid);
         print (json_encode($result));
     }
     
