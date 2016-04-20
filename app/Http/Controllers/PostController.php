@@ -210,7 +210,7 @@ class PostController extends Controller
      */
     public function destroy(Request $request) 
     {
-    	$WHERE = "DELETE FROM posts WHERE pid= $pid "
-        DB::delete( "$WHERE" );
+    	$DEL = "DELETE FROM posts WHERE pid= '$pid' "
+        DB::delete( "$DEL" );
     }
 }
