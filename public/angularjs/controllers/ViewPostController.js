@@ -34,6 +34,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 	{
 		$http.get(API_URL + "posts/" + id )
 		.success(function(response){
+			alert(API_URL + "posts/" + id);
 			$scope.posts = response;
 		});
 	}
