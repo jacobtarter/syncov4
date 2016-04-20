@@ -215,7 +215,7 @@ class PostController extends Controller
     	$post = Post::find($pid);
         $post->delete();
         console.log( "sql: " + $DEL );
-        return "Post deleted with PID: " . $request->input('pid');
+        return "Post deleted with PID: " ;
     }
     
 }
