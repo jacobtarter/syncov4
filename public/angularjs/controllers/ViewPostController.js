@@ -14,7 +14,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 	$scope.confirmDelete = function(pid)
 	{
 		var isConfirmDelete = confirm('Are you sure you want to delete this post?');
-		if (isConfimDelete)
+		if (isConfirmDelete)
 		{
 			http({
 				method: 'DELETE',
