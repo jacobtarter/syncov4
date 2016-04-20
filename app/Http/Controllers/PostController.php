@@ -213,7 +213,7 @@ class PostController extends Controller
     {
         $pid = $request->input('pid');
     	$DEL = "DELETE FROM posts WHERE pid= '$pid' ";
-        alert( $DEL );
+        console.log( $DEL );
         DB::delete( "$DEL" );
     }
     
