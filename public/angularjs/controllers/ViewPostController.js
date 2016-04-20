@@ -31,11 +31,11 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		else {
 			return false;
 		}
-
+	}
 	$scope.viewPost = function(id)
 	{
-		alert('Hi!');
-		console.log('viewPost');
+		alert('Hi!' + id);
+		console.log('viewPost' + id);
 
 		/*
 		$http.get(API_URL + "posts/" + id )
