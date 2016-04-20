@@ -59,7 +59,7 @@ class PostController extends Controller
         
 
         foreach($DATA as $row){
-            if($row->pid != $previousID)
+            if($row->id != $previousID)
             {
                 if( !is_null($current))
                 {
