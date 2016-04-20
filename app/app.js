@@ -5,7 +5,7 @@ app.config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
 			when('/ViewOrder/:id', {
-				templateUrl: 'angularjs/templates/show_post.html',
+				templateUrl: 'js/show_post.html',
 				controller: 'ViewPostController'
 			});
 	}]);
