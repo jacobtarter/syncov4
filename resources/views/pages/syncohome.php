@@ -32,14 +32,19 @@
 		<tr ng-repeat="x in posts | limitTo:howMany">
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
-		    	<button class="btn btn-default btn-xs btn-up" >Downvote</button>
+		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
 		    </td>
 		    <td>{{ x.about.post_score }}</td>
 		    <td>{{ x.about.upvotes }}</td>
 		    <td>{{ x.about.downvotes }}</td>
-		    <td><p ng-click="post = {{ x.about.pid }}">{{ x.about.title }}</p></td>
+		    <td>{{ x.about.title }}</td>
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
+		    <td>
+		    	<button class="btn btn-default btn-xs btn-view" >View/Comment</button>
+		    	<button class="btn btn-default btn-xs btn-edit" >Edit</button>
+		    	<button class="btn btn-default btn-xs btn-delete ng-click="confirmDelete(x.about.pid)" >Delete</button>
+		    </td>
 		    
 		    
 		</tr>

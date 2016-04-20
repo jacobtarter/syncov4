@@ -22,9 +22,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
 
-	Route::get('v1/posts/destroy/', function() {
- 	 return view('posts.destroy');
-	});
+	Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy');
 
 
 
