@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Post;
 
+use DB;
+
 class PostController extends Controller
 {
     /**
