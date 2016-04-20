@@ -50,7 +50,7 @@
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-view" >View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" >Edit</button>
-		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.pid)">Delete</button>
+		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
 		    </td>
 		    
 		    
