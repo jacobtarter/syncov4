@@ -12,7 +12,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 	//Delete Post
 
 	$scope.confirmDelete = //function(pid)
-	{
+	
 		/*
 		var isConfirmDelete = confirm('Are you sure you want to delete this post?');
 		if (isConfirmDelete)
