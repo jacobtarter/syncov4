@@ -18,7 +18,7 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 <h1> Test </h1>
 <p id="login"></p>
 {!! Form::open(array('route' => 'posts.store')) !!}
-    {{ Form::label('title', 'Title: ') }}
+    <div class = "commentTitle" > {{ Form::label('title', 'Title: ') }} </div>
     {{ Form::text('title', null) }}
     {{ Form::label('posttext', "Post Text: ") }}
     {{ Form::textarea('ptext', null) }}
