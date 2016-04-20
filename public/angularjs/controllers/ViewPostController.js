@@ -39,6 +39,9 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 				success(function(data) {
 					location.reload();
 				}).
+				error(function(data) {
+					alert('Unable to delete.');
+				});
 	}
 	
 		
