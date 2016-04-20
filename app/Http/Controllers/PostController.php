@@ -221,8 +221,8 @@ class PostController extends Controller
 
     public function test($pid)
     {
-        $result = Post::where('pid', '=', $pid);
-        return $result;
+        //$result = Post::where('pid', '=', $pid);
+        print "hello";
     }
     
 }
