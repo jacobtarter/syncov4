@@ -30,18 +30,12 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 			return false;
 		}
 
-	$scope.viewPost = function()
+	$scope.viewPost = function(id)
 	{
-		$http({
-				method: 'GET',
-				url: API_URL + 'posts/view'
-			}).
-				success(function(data) {
-					location.reload();
-				}).
-				error(function(data) {
-					alert('Unable to delete.');
-				});
+		$http.get(API_URL + "posts/" + id )
+		.success(function(response){
+			$scope.posts = response;
+		});
 	}
 	
 		

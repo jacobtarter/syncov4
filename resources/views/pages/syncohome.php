@@ -18,7 +18,6 @@
 
 <p style="font-size: 24px"><b>Synco!</b></p>
 
-<!test comment, testing github>
 
 <!{{ Auth::check() ? "Logged In" : "Logged Out" }}>
 
@@ -48,7 +47,7 @@
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
 		    <td>
-		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost()">View/Comment</button>
+		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" >Edit</button>
 		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
 		    </td>
@@ -62,6 +61,7 @@
 </div>
 <!-- Javascript libraries -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity=
