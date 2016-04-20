@@ -18,7 +18,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		{
 			$http({
 				method: 'DELETE',
-				url: API_URL + 'posts/' + pid
+				url: API_URL + 'posts/delete/' + pid
 			}).
 			success(function(data) {
 				//console.log(data);
@@ -26,7 +26,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 			}).
 			error(function(data) {
 				//console.log(data);
-				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/' + pid) ;
+				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/delete/' + pid) ;
 			});
 		}
 		else
