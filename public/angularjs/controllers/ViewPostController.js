@@ -16,8 +16,8 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		var isConfirmDelete = confirm('Are you sure you want to delete this post?');
 		if (isConfirmDelete)
 		{
-			$.ajax({
-				type: 'DELETE',
+			$http({
+				method: 'DELETE',
 				url: API_URL + 'posts/' + pid
 			}).
 			success(function(affected) {
