@@ -214,6 +214,7 @@ class PostController extends Controller
         //$pid = $request->input('pid');
     	$post = Post::find($pid);
         $post->delete();
+        return "Post successfully deleted at post ID: " . $request->input('pid');
         //Session::flash('success', 'The post was deleted.');
         //console.log( "sql: " + $DEL );
         //$affected = Post::where('pid', '=', $pid)->delete();
