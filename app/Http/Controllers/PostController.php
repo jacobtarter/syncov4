@@ -144,7 +144,7 @@ class PostController extends Controller
         
         print (json_encode($postsFinal));
         //echo json_encode($DATA);
-        }
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -208,7 +208,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request) 
+    public function destroy($pid) 
     {
     	$DEL = "DELETE FROM posts WHERE pid= '$pid' "
         DB::delete( "$DEL" );
