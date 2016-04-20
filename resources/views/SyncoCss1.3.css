@@ -77,6 +77,15 @@ button
   padding:2px;
   margin:5px 5px 5px 0px;
 }
+
+.commentTitleForm
+{
+  background-color: #ccffff;
+  padding:2px;
+  margin:5px 5px 5px 0px;
+  justify-content: center;
+}
+
 .commentBody
 {
   padding-left: 5%;
