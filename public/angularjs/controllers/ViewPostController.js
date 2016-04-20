@@ -1,6 +1,6 @@
 app.controller('ViewPostController', function($scope, $http, API_URL) {
 
-	$scope.post = null;
+	$scope.posts = null;
 
 	//Get Posts Method
 
@@ -32,6 +32,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 
 	$scope.viewPost = function(id)
 	{
+		alert('Hi!');
 		$http.get(API_URL + "posts/" + id )
 		.success(function(response){
 			alert(API_URL + "posts/" + id);
