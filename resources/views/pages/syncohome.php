@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US" ng-app="synco">
 <head>
-	<title>Synco Message Board</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<!-- Load Bootstrap -->
-	<link href="<? asset('css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<title>Synco Message Board</title>
 </head>
 <body>
 
@@ -55,6 +60,8 @@
 </div>
 <!-- Javascript libraries -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!-- AngularJS Scripts -->
 <script src="<?= asset('angularjs/app.js') ?>"></script>
 <script src="<?= asset('angularjs/controllers/SyncoHomeController.js') ?>"></script>
