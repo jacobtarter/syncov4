@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div ng-controller="SyncoHomeController">
+<div ng-controller="ViewPostController">
 
 <p style="font-size: 24px"><b>Synco!</b></p>
 
@@ -50,7 +50,7 @@
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-view" >View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" >Edit</button>
-		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="console.log('delete.')">Delete</button>
+		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.pid)">Delete</button>
 		    </td>
 		    
 		    
