@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div ng-controller="angPostController">
+<div ng-controller="SyncoHomeController">
 
 <p style="font-size: 24px"><b>Synco!</b></p>
 
@@ -37,7 +37,7 @@
 		    <td>{{ x.about.post_score }}</td>
 		    <td>{{ x.about.upvotes }}</td>
 		    <td>{{ x.about.downvotes }}</td>
-		    <td>{{ x.about.title }}</td>
+		    <td ng-click="post = x.about.pid">{{ x.about.title }}</td>
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
 		    
@@ -52,7 +52,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!-- AngularJS Scripts -->
 <script src="<?= asset('angularjs/app.js') ?>"></script>
-<script src="<?= asset('angularjs/controllers/angPostController.js') ?>"></script>
+<script src="<?= asset('angularjs/controllers/SyncoHomeController.js') ?>"></script>
 </body>
 </html>
 

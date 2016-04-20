@@ -180,17 +180,6 @@ class PostController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -221,8 +210,8 @@ class PostController extends Controller
      */
     public function destroy(Request $request) 
     {
-	$post = Post::find($request->input('pid'));
-	$post->delete();
-	return "Post record successfully deleted, PID: " . $request->input('pid');
+    	$post = Post::find($request->input('pid'));
+    	$post->delete();
+    	return "Post record successfully deleted, PID: " . $request->input('pid');
     }
 }
