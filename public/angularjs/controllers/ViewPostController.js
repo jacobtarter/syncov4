@@ -32,7 +32,13 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 
 	$scope.viewPost = function()
 	{
-		return view('viewPost');
+		$http({
+				method: 'GET',
+				url: API_URL + 'posts/view'
+			}).
+				success(function(data) {
+					location.reload();
+				}).
 	}
 	
 		
