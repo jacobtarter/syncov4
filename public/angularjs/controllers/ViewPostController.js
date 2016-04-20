@@ -47,6 +47,6 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
         });
     }
 }
-	}
+	
 
 });
