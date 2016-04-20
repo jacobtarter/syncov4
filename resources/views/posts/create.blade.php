@@ -6,13 +6,13 @@
 <body>
 <link rel="text/stylesheet" href="public/Synco.Css1.3.css" />
 <p style="font-size: 24px"><b>Post New Comment!</b></p>
-<script>
+<!--<script>
 $user = Auth::user();
 if($user)
 {
 document.getElementById("login").innerHTML = "Hello $user->name";
 }
-</script>
+</script> -->
 <h1> Test </h1>
 <p id="login"></p>
 {!! Form::open(array('route' => 'posts.store')) !!}
