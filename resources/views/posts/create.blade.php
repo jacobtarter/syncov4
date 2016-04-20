@@ -17,9 +17,9 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 </script> -->
 <h1> Test </h1>
 <p id="login"></p>
-<div class = "commentMain"> {!! Form::open(array('route' => 'posts.store')) !!}</div>
-    <div class = "commentTitle" > {{ Form::label('title', 'Title: ') }} </div>
-    {{ Form::text('title', null) }}
+    {!! Form::open(array('route' => 'posts.store')) !!}
+    <div class = "commentTitle" > {{ Form::label('title', 'Title: ') }} 
+    {{ Form::text('title', null) }} </div>
     {{ Form::label('posttext', "Post Text: ") }}
     {{ Form::textarea('ptext', null) }}
     {{ Form::submit('Create New Post') }}
