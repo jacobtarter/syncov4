@@ -21,7 +21,12 @@
 
 <!{{ Auth::check() ? "Logged In" : "Logged Out" }}>
 
+<script>
+	
+</script>
 
+
+<div ng-view>
 <table class="table">
 	<thead>	
 		<tr>
@@ -47,16 +52,17 @@
 		    <td>{{ x.about.ptext }}
 		    <td>{{ x.about.num_comments }}
 		    <td>
-		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
+		    	<a href = "#/ViewOrder"><button class="btn btn-default btn-xs btn-view">View/Comment</button></a>
 		    	<button class="btn btn-default btn-xs btn-edit" >Edit</button>
 		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
-		    	
+
 		    </td>
 		    
 		    
 		</tr>
 	</tbody>
-</table>	
+</table>
+</div>	
 
 
 </div>
