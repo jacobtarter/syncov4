@@ -17,8 +17,8 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 		if (isConfirmDelete)
 		{
 			$http({
-				method: 'GET',
-				url: API_URL + 'posts/delete/' + pid
+				method: 'DELETE',
+				url: API_URL + 'posts/' + pid
 			}).
 			success(function(data) {
 				//console.log(data);
@@ -26,7 +26,7 @@ app.controller('ViewPostController', function($scope, $http, API_URL) {
 			}).
 			error(function(data) {
 				//console.log(data);
-				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/delete/' + pid) ;
+				alert('Error - Post not deleted. pid: ' + API_URL + 'posts/' + pid) ;
 			});
 		}
 		else
