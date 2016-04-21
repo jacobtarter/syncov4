@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', function($scope) {
+app.controller('mainController', ['$scope', '$http', API_URL, function($scope) {
 
 $scope.posts = null;
 
