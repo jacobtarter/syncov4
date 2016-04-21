@@ -3,17 +3,17 @@ var app = angular.module('app', ['ngRoute', 'ngCookies']);
 app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.when('/', {
-			templateurl: 'templates/main.html',
+			templateUrl: 'templates/main.html',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('/view', {
-			templateurl: 'templates/view.html',
+		$routeProvider.when('#/view', {
+			templateUrl: 'templates/view.html',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('/login', {
-			templateurl: 'templates/login.html',
+		$routeProvider.when('#/login', {
+			templateUrl: 'templates/login.html',
 			controller: 'mainController'
 		});
 
