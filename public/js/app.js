@@ -15,7 +15,7 @@ app.config(['$routeProvider', '$locationProvider',
 
 		$routeProvider.when('/login', {
 			templateUrl: 'templates/login.html',
-			controller: 'userController'
+			controller: 'mainController'
 		});
 
 		$routeProvider.otherwise('/');
