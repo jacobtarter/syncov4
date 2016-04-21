@@ -81,11 +81,16 @@ button
 .commentTitleForm
 {
   display: block;
-  background-color: blue;
+  background-color: red;
   padding:2px;
   margin:5px 5px 5px 0px;
   margin-left:auto;
   margin-right: auto;
+}
+
+test
+{
+  background: red; 
 }
 
 .commentBody
