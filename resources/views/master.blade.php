@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="synco">
 <head>
 	<title>Synco</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 </head>
 
 <body>
+
+	<p style="font-size: 24px"><b>Synco!</b></p>
+
 	<div class="container">
 		<div ng-view></div>
 
