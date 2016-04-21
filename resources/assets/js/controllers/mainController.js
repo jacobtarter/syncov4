@@ -50,4 +50,4 @@ $scope.posts = null;
 
 	
 
-});
+};
