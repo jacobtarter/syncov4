@@ -15,13 +15,13 @@
 
 Route::resource('posts', 'PostController');
 Route::resource('users', 'UserController');
-Route::post('auth', 'UserController@checkAuth');
+
 
 Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/', 'PageController@getMaster');
 
-
+	Route::post('/auth', 'UserController@checkAuth');
 
 
 	Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy' );
