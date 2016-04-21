@@ -11,7 +11,7 @@
 		</tr>
 	</thead>
 	<tbody>	
-		<tr ng-repeat="x in posts | limitTo:howMany">
+		<tr ng-repeat="x in posts">
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
 		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
@@ -34,5 +34,3 @@
 	</tbody>
 </table>
 
-<div ng-view>
-</div>	
