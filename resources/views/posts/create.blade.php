@@ -20,9 +20,9 @@ document.getElementById("login").innerHTML = "Hello $user->name";
     {!! Form::open(array('route' => 'posts.store')) !!}
     <div class = "commentTitleForm" > {{ Form::label('title', 'Title: ') }}
     {{ Form::text('title', null) }} </div>
-    {{ Form::label('posttext', "Post Text: ") }}
-    {{ Form::textarea('ptext', null) }}
-    {{ Form::submit('Create New Post') }}
+    <div> {{ Form::label('posttext', "Post Text: ") }} </div>
+    <div> {{ Form::textarea('ptext', null) }} </div>
+    <div> {{ Form::submit('Create New Post') }} </div>
 {!! Form::close() !!}
 
 </head>
