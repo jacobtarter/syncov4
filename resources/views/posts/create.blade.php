@@ -16,15 +16,16 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 }
 </script> -->
 <h1> Test </h1>
+<div class = "commentTitleForm" >
 <p id="login"></p>
     {!! Form::open(array('route' => 'posts.store')) !!}
-    <div class = "commentTitleForm" > {{ Form::label('title', 'Title: ') }}
-    {{ Form::text('title', null) }} </div>
-    <div> {{ Form::label('posttext', "Post Text: ") }} </div>
-    <div> {{ Form::textarea('ptext', null) }} </div>
-    <div> {{ Form::submit('Create New Post') }} </div>
+     {{ Form::label('title', 'Title: ') }}
+    {{ Form::text('title', null) }}
+     {{ Form::label('posttext', "Post Text: ") }}
+     {{ Form::textarea('ptext', null) }}
+     {{ Form::submit('Create New Post') }}
 {!! Form::close() !!}
-
+</div>
 </head>
 </body>
 </html>
