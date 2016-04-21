@@ -16,4 +16,7 @@ class PageController extends Controller
 	public function getView() {
 		return view('pages.viewpost');
 	}
+	public function getMaster() {
+		return view('master');
+	}
 }

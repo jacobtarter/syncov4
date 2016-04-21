@@ -17,7 +17,7 @@ Route::resource('posts', 'PostController');
 
 Route::group(['middleware' => ['web']], function () {
 
-	Route::get('/', 'PageController@getIndex');
+	Route::get('/', 'PageController@getMaster');
 
 
 
