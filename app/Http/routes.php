@@ -14,6 +14,8 @@
 
 
 Route::resource('posts', 'PostController');
+Route::resource('users', 'UserController');
+Route::post('auth', 'UserController@checkAuth');
 
 Route::group(['middleware' => ['web']], function () {
 

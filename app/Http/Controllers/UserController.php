@@ -45,6 +45,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
+    public function checkAuth(Request $request)
+    {
+        $credentials = [
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
+        ];
+
+        if (!Auth:attempt($credentails)) {
+            return response('Invalid Login', 403);
+        }
+        return response(Auth::user(), 201);
+    }
+
     public function show($id)
     {
         //

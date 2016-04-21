@@ -11,6 +11,10 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        App\User::create([
+        	'name' => 'Synco',
+        	'email' => 'syncoserver@gmail.com',
+        	'password' => \Hash::make('syncosyncosynco'),
+        	]);
     }
 }

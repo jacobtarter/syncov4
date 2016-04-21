@@ -22,4 +22,10 @@ elixir(function(mix) {
     mix.scripts([
     		'controllers/mainController.js'
     	], 'public/js/controllers.js');
+
+    mix.version([
+    	'js/all.js',
+    	'js/factories.js',
+    	'js/controllers.js'
+    ]);
 });
