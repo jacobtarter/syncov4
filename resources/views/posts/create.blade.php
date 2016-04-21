@@ -19,11 +19,12 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 <div class = "commentTitleForm" >
 <p id="login"></p>
     {!! Form::open(array('route' => 'posts.store', 'style' => '#test')) !!}
-     <div class = "test"> {{ Form::label('title', 'Title: ') }} </div>
+     <div class = "test"> {{ Form::label('title', 'Title: ') }}
     {{ Form::text('title', null) }}
      {{ Form::label('posttext', "Post Text: ") }}
      {{ Form::textarea('ptext', null) }}
      {{ Form::submit('Create New Post') }}
+     </div>
 {!! Form::close() !!}
 </div>
 </head>
