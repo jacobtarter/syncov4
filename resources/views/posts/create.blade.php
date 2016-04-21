@@ -18,7 +18,7 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 <h1> Test </h1>
 <div class = "commentTitleForm" >
 <p id="login"></p>
-  {!! Form::open(array('route' => 'posts.store') !!}
+  {!! Form::open(array('route' => 'posts.store')) !!}
     {{ Form::label('title', 'Title: ', array('class' => 'test')) }}
     {{ Form::text('title', null, array('class' => 'test')) }}
     {{ Form::label('posttext', "Post Text: ", array('class' => 'test')) }}
