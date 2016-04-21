@@ -4,7 +4,7 @@ app.controller('userController', ['$scope', '$http', '$location', function($scop
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			url: 'http://www.synco.xyz/auth',
+			url: baseUrl + 'auth',
 			method: "POST",
 			data: {
 				email: $scope.login.username,
