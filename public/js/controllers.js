@@ -1,6 +1,6 @@
-app.controller('mainController', ['$scope', '$http', '$API_URL' function($scope, $http, $API_URL) {
+app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 
-
+	$scope.API_URL = "http://www.synco.xyz/api/v1/";
 
 	$scope.posts = null;
 
@@ -8,7 +8,7 @@ app.controller('mainController', ['$scope', '$http', '$API_URL' function($scope,
 
 	//Get Posts Method
 
-	$http.get(API_URL + "posts")
+	$http.get($scope.API_URL + "posts")
 		.success(function(response){
 			$scope.posts = response;
 		});
@@ -21,7 +21,7 @@ app.controller('mainController', ['$scope', '$http', '$API_URL' function($scope,
 		if (isConfirmDelete) {
 			$http({
 				method: 'DELETE',
-				url: API_URL + 'posts/' + id
+				url: $scope.API_URL + 'posts/' + id
 			}).
 				success(function(data) {
 					location.reload();
@@ -40,7 +40,7 @@ app.controller('mainController', ['$scope', '$http', '$API_URL' function($scope,
 		console.log('viewPost' + id);
 
 		
-		$http.get(API_URL + "posts/" + id )
+		$http.get($scope.API_URL + "posts/" + id )
 		.success(function(response){
 			alert(API_URL + "posts/" + id);
 			$scope.posts = response;
