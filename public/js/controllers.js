@@ -50,5 +50,5 @@ $scope.posts = null;
 
 	
 
-});
+};
 //# sourceMappingURL=controllers.js.map
