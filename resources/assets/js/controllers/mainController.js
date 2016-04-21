@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', '$http', API_URL, function($scope) {
+app.controller('mainController', function($scope, $http, API_URL) {
 
 $scope.posts = null;
 
@@ -50,4 +50,4 @@ $scope.posts = null;
 
 	
 
-}]);
+});
