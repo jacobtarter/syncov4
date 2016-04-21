@@ -80,6 +80,7 @@ button
 
 .commentTitleForm
 {
+  display: block;
   background-color: #ccffff;
   padding:2px;
   margin:5px 5px 5px 0px;
