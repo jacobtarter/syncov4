@@ -31,6 +31,6 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get( '/api/v1/posts/{pid?}', 'PostController@index' );
 	Route::get( '/api/v1/posts/test/{pid}', 'PostController@test');
 
-	Route::get('/api/v1/posts/show_post.html', function())
+	Route::get('/api/v1/posts/show_post.html', function());
 }
 );
