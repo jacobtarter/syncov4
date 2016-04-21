@@ -23,7 +23,7 @@ document.getElementById("login").innerHTML = "Hello $user->name";
     {{ Form::text('title', null) }}
     {{ Form::label('posttext', "Post Text: ") }}
     {{ Form::textarea('ptext', null) }}
-    {{ Form::submit('Create New Post', array('class'=>'btn btn-primary')) }}
+    {{ Form::submit('Create New Post', 'class'=>'btn btn-primary')) }}
 
 {!! Form::close() !!}
 </div>
