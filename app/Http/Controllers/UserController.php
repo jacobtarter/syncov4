@@ -54,6 +54,7 @@ class UserController extends Controller
             'email' => $request->input('email'),
             'password' => $request->input('password'),
         ];
+        
 
         if (!Auth::attempt($credentails)) {
             return response('Invalid Login', 403);
