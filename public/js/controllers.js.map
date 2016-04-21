@@ -1,0 +1,1 @@
+{"version":3,"sources":["mainController.js"],"names":[],"mappings":"AAAA;AACA;AACA","file":"controllers.js","sourcesContent":["app.controller('mainController', ['$scope', function($scope) {\n\n}]);"],"sourceRoot":"/source/"}
