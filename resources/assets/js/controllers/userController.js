@@ -1,11 +1,11 @@
-app.controller('userController', ['$scope', '$http', function($scope, $http) {
+app.controller('userController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 	angular.extend($scope, {
 		doLogin: function(loginForm) {
 			$http([
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				url: "synco.xyz/auth",
+				url: "synco.xyz/auth/",
 				method: "POST",
 				data: {
 					email: $scope.login.username,
@@ -14,6 +14,10 @@ app.controller('userController', ['$scope', '$http', function($scope, $http) {
 
 			]).success(function(response) {
 				console.log(response);
+				$location.path('/');
+			}).error(function(data, status, headers) {
+				console.log(data, status, headers);
+				alert(data);
 			});
 		}
 	});
