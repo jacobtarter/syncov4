@@ -1,5 +1,5 @@
-var app = angular.module('synco', ['ngRoute', 'ngCookies'])
-	.constant('API_URL', 'http://www.synco.xyz/api/v1/');
+var app = angular.module('synco', ['ngRoute', 'ngCookies']);
+	
 
 app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
