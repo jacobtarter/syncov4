@@ -1,4 +1,5 @@
-var app = angular.module('app', ['ngRoute', 'ngCookies']);
+var app = angular.module('synco', ['ngRoute', 'ngCookies'])
+	.constant('API_URL', 'http://www.synco.xyz/api/v1/');;
 
 app.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
@@ -7,12 +8,12 @@ app.config(['$routeProvider', '$locationProvider',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('/view', {
+		$routeProvider.when('#/view', {
 			templateUrl: 'templates/view.html',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('/login', {
+		$routeProvider.when('#/login', {
 			templateUrl: 'templates/login.html',
 			controller: 'mainController'
 		});
