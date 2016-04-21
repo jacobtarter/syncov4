@@ -20,10 +20,10 @@ document.getElementById("login").innerHTML = "Hello $user->name";
 <p id="login"></p>
   {!! Form::open(array('route' => 'posts.store', 'style' => 'test')) !!}
     {{ Form::label('title', 'Title: ', array('class' => 'test')) }}
-    {{ Form::text('title', null) }}
-    {{ Form::label('posttext', "Post Text: ") }}
-    {{ Form::textarea('ptext', null) }}
-    {{ Form::submit('Create New Post') }}
+    {{ Form::text('title', null, array('class' => 'test')) }}
+    {{ Form::label('posttext', "Post Text: ", array('class' => 'test')) }}
+    {{ Form::textarea('ptext', null, array('class' => 'test')) }}
+    {{ Form::submit('Create New Post', array('class' => 'test')) }}
   {!! Form::close() !!}
 </div>
 </head>
