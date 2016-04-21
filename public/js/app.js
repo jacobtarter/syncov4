@@ -8,12 +8,12 @@ app.config(['$routeProvider', '$locationProvider',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('#/view', {
+		$routeProvider.when('/view', {
 			templateUrl: 'templates/view.html',
 			controller: 'mainController'
 		});
 
-		$routeProvider.when('#/login', {
+		$routeProvider.when('/login', {
 			templateUrl: 'templates/login.html',
 			controller: 'mainController'
 		});
