@@ -1,6 +1,8 @@
-app.controller('mainController', function($scope, $http, API_URL) {
+app.controller('mainController', ['$scope', '$http', '$API_URL' function($scope, $http, $API_URL) {
 
-$scope.posts = null;
+
+
+	$scope.posts = null;
 
 	$scope.whichPost = null;
 
@@ -50,5 +52,5 @@ $scope.posts = null;
 
 	
 
-});
+}]);
 //# sourceMappingURL=controllers.js.map
