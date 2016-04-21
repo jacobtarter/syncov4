@@ -14,7 +14,7 @@
 
 
 Route::resource('posts', 'PostController');
-Route::resource('users', 'UserController');
+Route::resource('user', 'UserController');
 
 
 Route::group(['middleware' => ['web']], function () {
