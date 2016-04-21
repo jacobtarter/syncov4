@@ -21,9 +21,9 @@ document.getElementById("login").innerHTML = "Hello $user->name";
   {!! Form::open(array('route' => 'posts.store', 'style' => 'test')) !!}
     {{ Form::label('title', 'Title: ') }}
     {{ Form::text('title', null) }}
-    {{ Form::label('posttext', "Post Text: ") }}
+   <div>  {{ Form::label('posttext', "Post Text: ") }} </div>
     {{ Form::textarea('ptext', null) }}
-    {{ Form::submit('Create New Post', 'class'=>'btn btn-primary')) }}
+    {{ Form::submit('Create New Post')) }}
 
 {!! Form::close() !!}
 </div>
