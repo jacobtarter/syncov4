@@ -91,7 +91,8 @@ button
 .test
 {
   background-color: red;
-  
+  display: block;
+  color:red;
 }
 
 .commentBody
