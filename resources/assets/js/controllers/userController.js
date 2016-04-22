@@ -97,10 +97,10 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	editPost: function(id) {
 		$http.get($scope.API_URL + "posts/" + id )
 		.success(function(response){
-			$scope.whichPost = angular.fromJson(response[0]);
+			$scope.whichPost = JSON.parse(response);
 		});
 
-		alert($scope.whichPost.about.id);
+		console.log($scope.whichPost[0]);
 
 
 		$location.path('/post/' + id );
