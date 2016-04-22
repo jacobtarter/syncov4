@@ -81,10 +81,10 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 				ptext: $scope.post.ptext
 			}
 		}).success(function(response) {
-			console.log(response);
+			console.log("post created, redirecting to home");
 			$location.path('/');
 		}).error(function(data,status,headers) {
-			console.log(data,status,headers);
+			console.log(data);
 			alert("Error Making Post");
 		});
 	}

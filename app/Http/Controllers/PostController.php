@@ -185,6 +185,11 @@ class PostController extends Controller
         */
 
         // store in database
+        $this->validate($request, array(
+            'title' => 'required',
+            'ptext' => 'required'
+        ));
+
         $post = new Post;
         $post->title = $request->input('title');
         $post->ptext = $request->input('ptext');
