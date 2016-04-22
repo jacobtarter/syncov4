@@ -16,20 +16,21 @@
 Route::resource('posts', 'PostController');
 Route::resource('user', 'UserController');
 
+Route::get('/', 'PageController@getMaster');
+
+Route::post('/auth', 'UserController@checkAuth');
+
+
+Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy' );
+Route::get ('/api/v1/posts/view', 'PageController@getView' );
+
+Route::get( '/api/v1/posts/{pid?}', 'PostController@index' );
+Route::get( '/api/v1/posts/test/{pid}', 'PostController@test');
+
 
 Route::group(['middleware' => ['web']], function () {
 
-	Route::get('/', 'PageController@getMaster');
-
-	Route::post('/auth', 'UserController@checkAuth');
-
-
-	Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy' );
-	Route::get ('/api/v1/posts/view', 'PageController@getView' );
-
-
-	Route::get( '/api/v1/posts/{pid?}', 'PostController@index' );
-	Route::get( '/api/v1/posts/test/{pid}', 'PostController@test');
+	
 
 	
 }
