@@ -67,4 +67,29 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			});
 		}
 	});
+
+	angular.extend($scope, {
+	makePost: function(postForm) {
+		$http({	
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			url: baseUrl + 'auth',
+			method: "POST",
+			data: {
+				title: $scope.post.title,
+				text: $scope.post.ptext
+			}
+		}).success(function(response) {
+			console.log(response);
+			$location.path('/');
+		}).error(function(data,status,headers) {
+			console.log(data,status,headers);
+			alert(data);
+		});
+	}
+	});
+
+
+
 }]);

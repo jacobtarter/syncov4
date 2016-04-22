@@ -21,6 +21,7 @@ Route::get('/', 'PageController@getMaster');
 Route::post('/auth', 'UserController@checkAuth');
 
 
+Route::post( '/api/v1/posts'), 'PostController@store' );
 Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy' );
 Route::get ('/api/v1/posts/view', 'PageController@getView' );
 
