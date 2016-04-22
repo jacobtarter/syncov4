@@ -36,10 +36,8 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	}
 	$scope.viewPost = function(id)
 	{
-		alert('Hi!' + id);
 		console.log('viewPost' + id);
 
-		
 		$http.get($scope.API_URL + "posts/" + id )
 		.success(function(response){
 			alert(API_URL + "posts/" + id);
