@@ -60,6 +60,10 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 				}
 			}).success(function(response) {
 				console.log(response);
+				$location.path('/');
+			}).error(function(data,status,headers) {
+				console.log(data,status,headers);
+				alert(data);
 			});
 		}
 	});
