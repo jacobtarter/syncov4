@@ -100,7 +100,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			$scope.post = response;
 		});
 
-		alert($scope.post);
+		alert($scope.post[0]);
 
 
 		$location.path('/post/' + id );
