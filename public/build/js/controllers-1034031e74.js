@@ -74,7 +74,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			url: baseUrl + 'auth',
+			url: baseUrl + api + "posts",
 			method: "POST",
 			data: {
 				title: $scope.post.title,
@@ -85,7 +85,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			$location.path('/');
 		}).error(function(data,status,headers) {
 			console.log(data,status,headers);
-			alert(data);
+			alert("Error Making Post");
 		});
 	}
 	});

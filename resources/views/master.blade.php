@@ -4,6 +4,7 @@
 	<title>Synco</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 	<script>var baseUrl = "{{ url('/') }}/";</script>
+	<script>var api = "v1/api/"; </script>
 </head>
 
 <body>
