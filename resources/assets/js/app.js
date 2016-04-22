@@ -23,7 +23,7 @@ synco.config(['$routeProvider', '$locationProvider',
 			controller: 'userController'
 		});
 
-		$routeProvider.when('/post/:pid', {
+		$routeProvider.when('/post/:id', {
 			templateUrl: 'templates/editPost.html',
 			controller: 'userController'
 		});

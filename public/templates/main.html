@@ -24,7 +24,8 @@
 		    <td>{{ x.about.num_comments }}
 		    <td>
 		    	<a href = "#/view"><button class="btn btn-default btn-xs btn-view">View/Comment</button></a>
-		    	<a href = "#/view/x.about.id"><button class="btn btn-default btn-xs btn-edit" >Edit</button></a>		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
+		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>		    
+		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
 
 		    </td>
 

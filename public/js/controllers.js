@@ -91,8 +91,8 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	});
 
 	angular.extend($scope, {
-	editPost: function(pid) {
-		$location.path('/post/' + pid );
+	editPost: function(id) {
+		$location.path('/post/' + id );
 	}	
 	});
 
