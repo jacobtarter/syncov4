@@ -97,7 +97,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	editPost: function(id) {
 		$http.get($scope.API_URL + "posts/" + id )
 		.success(function(response){
-			$scope.whichPost = response[0];
+			$scope.whichPost = JSON.parse(response[0]);
 		});
 
 		console.log($scope.whichPost.title);
