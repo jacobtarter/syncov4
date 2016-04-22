@@ -167,10 +167,10 @@ class PostController extends Controller
     {
         //
 	// validate data
-        $this->validate($request, array(
-                'title' => 'required|max:249',
-                'ptext' => 'required'
-            ));
+        //$this->validate($request, array(
+        //        'title' => 'required|max:249',
+         //       'ptext' => 'required'
+        //    ));
         // store in database
         $post = new Post;
         $post->title = $request->title;
