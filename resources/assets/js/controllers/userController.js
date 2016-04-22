@@ -42,7 +42,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 		$http.get(baseUrl + api + "posts/" + id )
 		.success(function(response){
-			alert(API_URL + "posts/" + id);
+			alert(baseUrl + api + "posts/" + id);
 			$scope.posts = response;
 		});
 
