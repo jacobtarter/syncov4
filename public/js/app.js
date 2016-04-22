@@ -8,7 +8,7 @@ synco.config(['$routeProvider', '$locationProvider',
 			controller: 'userController'
 		});
 
-		$routeProvider.when('/view', {
+		$routeProvider.when('/view/:id', {
 			templateUrl: 'templates/view.html',
 			controller: 'userController'
 		});

@@ -34,6 +34,8 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			return false;
 		}
 	}
+	
+	/*
 	$scope.viewPost = function(id)
 	{
 		console.log('viewPost' + id);
@@ -45,6 +47,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		});
 		
 	}
+	*/
 
 	angular.extend($scope, {
 		doLogin: function(loginForm) {
@@ -92,7 +95,26 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 	angular.extend($scope, {
 	editPost: function(id) {
+		$http.get(baseUrl + api + "posts/" + id )
+		.success(function(response){
+			alert(baseUrl + api + "posts/" + id);
+			$scope.post = response;
+		});
+
+
+
+
 		$location.path('/post/' + id );
+	}	
+	});
+
+	angular.extend($scope, {
+	viewPost: function(id) {
+
+
+
+
+		$location.path('/view/' + id );
 	}	
 	});
 
