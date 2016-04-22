@@ -19,7 +19,7 @@ synco.config(['$routeProvider', '$locationProvider',
 		});
 
 		$routeProvider.when('/post', {
-			templateUrl: 'post.html',
+			templateUrl: 'templates/post.html',
 			controller: 'userController'
 		});
 
