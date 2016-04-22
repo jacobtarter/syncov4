@@ -40,7 +40,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	{
 		console.log('viewPost' + id);
 
-		$http.get($scope.API_URL + "posts/" + id )
+		$http.get(basUrl + api + "posts/" + id )
 		.success(function(response){
 			alert(API_URL + "posts/" + id);
 			$scope.posts = response;
