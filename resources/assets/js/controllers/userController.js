@@ -70,6 +70,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 	angular.extend($scope, {
 	makePost: function(postForm) {
+		alert($scope.post.ptext);
 		$http({	
 			headers: {
 				'Content-Type': 'application/json'
