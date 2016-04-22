@@ -99,6 +99,8 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		$http.get($scope.API_URL + "posts" + "/" + id)
 		.success(function(response){
 			$scope.posts = response;
+		}).error(function(response) {
+			alert("error getting your json");
 		});
 
 
