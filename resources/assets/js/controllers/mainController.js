@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', '$http', function($scope, $http) {
+synco.controller('mainController', ['$scope', '$http', function($scope, $http) {
 
 	$scope.API_URL = "http://www.synco.xyz/api/v1/";
 
