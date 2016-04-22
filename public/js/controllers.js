@@ -70,7 +70,6 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 	angular.extend($scope, {
 	makePost: function(postForm) {
-		alert($scope.post.ptext);
 		$http({	
 			headers: {
 				'Content-Type': 'application/json'
@@ -79,7 +78,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			method: "POST",
 			data: {
 				title: $scope.post.title,
-				text: $scope.post.ptext
+				ptext: $scope.post.ptext
 			}
 		}).success(function(response) {
 			console.log(response);
