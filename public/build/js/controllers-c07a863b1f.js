@@ -85,10 +85,14 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			$location.path('/');
 		}).error(function(data,status,headers) {
 			console.log(data);
-			alert("Error Making Post");
+			alert("Error Making Post - Make sure form is filled.");
 		});
 	}
 	});
+
+	editPost: function(pid) {
+		$location.path('/post/' + pid );
+	}	
 
 
 
