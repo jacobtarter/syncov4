@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Validation\Validator;
+
 use App\Http\Requests;
 
 use App\Post;
