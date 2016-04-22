@@ -1,6 +1,7 @@
 app.controller('userController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 	angular.extend($scope, {
 		doLogin: function(loginForm) {
+			alert("thanks for logging in");
 			headers: {
 				'Content-Type': 'application/json'
 			},
