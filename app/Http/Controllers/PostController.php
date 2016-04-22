@@ -183,10 +183,11 @@ class PostController extends Controller
             return response(403, "Invalid Post");
         }
         */
+
         // store in database
         $post = new Post;
-        $post->title = $request->title;
-        $post->ptext = $request->ptext;
+        $post->title = $request->input('title');
+        $post->ptext = $request->input('ptext');
         $post->save();
         return redirect('/');	
     }
