@@ -62,5 +62,5 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 				console.log(response);
 			}).
 		
-	);
+	;
 }]);
