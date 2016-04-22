@@ -13,6 +13,8 @@ synco.controller('mainController', ['$scope', '$http', function($scope, $http) {
 			$scope.posts = response;
 		});
 
+		
+
 	//Delete Post
 
 	$scope.confirmDelete = function(id) {
