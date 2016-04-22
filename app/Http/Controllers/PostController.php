@@ -169,14 +169,16 @@ class PostController extends Controller
     {
         //
 	// validate data
-        $validator = Validator::make($request->all(), [
-            'title' => 'required|max:249',
-            'ptext' => 'required',
-
-            ]);    
+        $validation = Validator::make(
+            $request->all(),
+            [
+                'title' =>'required'
+                'ptext' =>'required'
+            ]
+        );
 
             
-        if ($validator->fails()) {
+        if ($validation->fails()) {
             return response(403, "Invalid Post");
         }
         // store in database

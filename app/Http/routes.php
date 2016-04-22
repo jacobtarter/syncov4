@@ -21,13 +21,13 @@ Route::get('/', 'PageController@getMaster');
 Route::post('/auth', 'UserController@checkAuth');
 
 
-Route::post( '/api/v1/posts', 'PostController@store' );
+//Route::post( '/api/v1/posts', 'PostController@store' );
 Route::delete( '/api/v1/posts/{pid}', 'PostController@destroy' );
 Route::get ('/api/v1/posts/view', 'PageController@getView' );
 
 Route::get( '/api/v1/posts/{pid?}', 'PostController@index' );
 Route::get( '/api/v1/posts/test/{pid}', 'PostController@test');
-
+$router->post('/api/v1/posts', 'PostController@store', ['middleware' => 'JsonApiMiddleware']);
 
 Route::group(['middleware' => ['web']], function () {
 
