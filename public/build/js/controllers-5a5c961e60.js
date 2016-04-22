@@ -35,7 +35,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		}
 	}
 	
-	/*
+	
 	$scope.viewPost = function(id)
 	{
 		console.log('viewPost' + id);
@@ -45,9 +45,11 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			alert(API_URL + "posts/" + id);
 			$scope.posts = response;
 		});
+
+		$location.path('/post/' + id );
 		
 	}
-	*/
+	
 
 	angular.extend($scope, {
 		doLogin: function(loginForm) {
@@ -93,12 +95,15 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	}
 	});
 
+	/*
 	angular.extend($scope, {
 	editPost: function(id) {
 		alert(id);
 		$http.get($scope.API_URL + "posts" + "/" + id)
 		.success(function(response){
 			$scope.posts = response;
+		}).error(function(response) {
+			alert("error getting your json");
 		});
 
 
@@ -106,6 +111,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		$location.path('/post/' + id );
 	}	
 	});
+*/
 
 	angular.extend($scope, {
 	viewPost: function(id) {
