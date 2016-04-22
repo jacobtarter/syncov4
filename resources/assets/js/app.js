@@ -5,12 +5,12 @@ synco.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.when('/', {
 			templateUrl: 'templates/main.html',
-			controller: 'mainController'
+			controller: 'userController'
 		});
 
 		$routeProvider.when('/view', {
 			templateUrl: 'templates/view.html',
-			controller: 'mainController'
+			controller: 'userController'
 		});
 
 		$routeProvider.when('/login', {
