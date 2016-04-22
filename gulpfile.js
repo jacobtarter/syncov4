@@ -20,8 +20,7 @@ elixir(function(mix) {
     	], 'public/js/app.js');
 
     mix.scripts([
-    		'controllers/mainController.js',
-    		'controllers/userController.js'
+    		'controllers/mainController.js'
     	], 'public/js/controllers.js');
 
     mix.version([
