@@ -169,6 +169,7 @@ class PostController extends Controller
     {
         //
 	// validate data
+        /*
         $validation = Validator::make(
             $request->all(),
             [
@@ -181,6 +182,7 @@ class PostController extends Controller
         if ($validation->fails()) {
             return response(403, "Invalid Post");
         }
+        */
         // store in database
         $post = new Post;
         $post->title = $request->title;
