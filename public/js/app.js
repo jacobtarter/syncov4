@@ -1,7 +1,7 @@
-var app = angular.module('synco', ['ngRoute', 'ngCookies']);
+var synco = angular.module('synco', ['ngRoute', 'ngCookies']);
 	
 
-app.config(['$routeProvider', '$locationProvider',
+synco.config(['$routeProvider', '$locationProvider',
 	function($routeProvider, $locationProvider) {
 		$routeProvider.when('/', {
 			templateUrl: 'templates/main.html',

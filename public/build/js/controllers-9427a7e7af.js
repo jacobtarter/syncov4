@@ -1,4 +1,4 @@
-app.controller('mainController', ['$scope', '$http', function($scope, $http) {
+synco.controller('mainController', ['$scope', '$http', function($scope, $http) {
 
 	$scope.API_URL = "http://www.synco.xyz/api/v1/";
 
@@ -51,7 +51,7 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	
 
 }]);
-app.controller('userController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+synco.controller('userController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 	
 	angular.extend($scope, {
 		doLogin: function(loginForm) {
