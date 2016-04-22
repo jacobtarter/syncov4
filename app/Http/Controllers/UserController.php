@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,9 +55,10 @@ class UserController extends Controller
         ];
         
 
-        if (!Auth::attempt($credentails)) {
+        if (!Auth::attempt($credentials)) {
             return response('Invalid Login', 403);
         }
+        
         return response(Auth::user(), 201);
     }
 
