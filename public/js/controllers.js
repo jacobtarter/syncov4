@@ -100,7 +100,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			$scope.whichPost = JSON.parse(response[0]);
 		});
 
-		console.log($scope.whichPost.title);
+		console.log($scope.whichPost.about.title);
 
 
 		$location.path('/post/' + id );
