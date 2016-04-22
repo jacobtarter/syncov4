@@ -61,7 +61,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			}).success(function(response) {
 				console.log(response);
 			}).
-		}
+		
 	});
 }]);
 //# sourceMappingURL=controllers.js.map
