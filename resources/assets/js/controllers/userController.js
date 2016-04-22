@@ -36,7 +36,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	}
 	
 	
-	$scope.viewPost = function(id)
+	$scope.editPost = function(id)
 	{
 		console.log('viewPost' + id);
 
