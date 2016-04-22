@@ -95,6 +95,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 	angular.extend($scope, {
 	editPost: function(id) {
+		alert(id);
 		$http.get($scope.API_URL + "posts")
 		.success(function(response){
 			$scope.posts = response;
