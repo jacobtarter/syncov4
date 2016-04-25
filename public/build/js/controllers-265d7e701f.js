@@ -141,5 +141,5 @@ synco.controller('editController', ['$scope', '$http', '$location', function($sc
 		});
 	
 
-	
+}]);
 //# sourceMappingURL=controllers.js.map
