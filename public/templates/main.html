@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Synco -- Post</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type = "text/css" href="http://jmurray.altervista.org/Synco/SyncoShow_Post5.css">
+</head>
+<body>
+	<!--<div clas = "commentFooter"> -->
+<div class = "row">
+	<div class = "col-xs-12 col-sm-8-offset-2">
+	<div class = "picBorder">
+    <img src="http://jmurray.altervista.org/Synco/SyncoImgName.png" alt="Synco" height ="100" width="200">
+  </div>
+
 <table class="table">
 	<thead>
 		<tr>
@@ -24,7 +43,7 @@
 		    <td>{{ x.about.num_comments }}
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
-		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>		    
+		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>
 		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
 
 		    </td>
