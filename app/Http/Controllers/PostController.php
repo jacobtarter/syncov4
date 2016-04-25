@@ -25,7 +25,7 @@ class PostController extends Controller
         if(!is_null($pid))
         {
             $WHERE= "
-                SELECT p.id, p.title, p.ptext, p.uid, p.created_at, c.cid, c.c_pid, c.ctext, c.uid, c.created_at, v.vid, v.votescore, v.v_pid, v.uid, v.created_at
+                SELECT p.id, p.title, p.ptext, p.name, p.created_at, c.cid, c.c_pid, c.ctext, c.name, c.created_at, v.vid, v.votescore, v.v_pid, v.name, v.created_at
                 FROM posts p 
                 LEFT JOIN comments c ON p.id = c.c_pid
                 LEFT JOIN votes v ON p.id = v.v_pid
@@ -35,7 +35,7 @@ class PostController extends Controller
         else 
         {
             $WHERE= "
-            SELECT p.id, p.title, p.ptext, p.uid, p.created_at, c.cid, c.c_pid, c.ctext, c.uid, c.created_at, v.vid, v.votescore, v.v_pid, v.uid, v.created_at
+            SELECT p.id, p.title, p.ptext, p.name, p.created_at, c.cid, c.c_pid, c.ctext, c.name, c.created_at, v.vid, v.votescore, v.v_pid, v.name, v.created_at
             FROM posts p 
             LEFT JOIN comments c ON p.id = c.c_pid
             LEFT JOIN votes v ON p.id = v.v_pid;
@@ -92,7 +92,7 @@ class PostController extends Controller
             $current['id'] = $row->id;
             $current['title'] = $row->title;
             $current['ptext'] = $row->ptext;
-            $current['uid'] = $row->uid;
+            $current['name'] = $row->name;
             $current['created_at'] = $row->created_at;
 
             $previousID = $current['id'];
@@ -103,7 +103,7 @@ class PostController extends Controller
             {
                 $comments['cid'] = $row->cid;
                 $comments['ctext'] = $row->ctext;
-                $comments['uid'] = $row->uid;
+                $comments['name'] = $row->name;
                 $comments['created_at'] = $row->created_at;
                 $commentBlock[] = $comments;
                 $previousComment = $row->cid;
@@ -115,7 +115,7 @@ class PostController extends Controller
             {
                 $votes['vid'] = $row->vid;
                 $votes['votescore'] = $row->votescore;
-                $votes['uid'] = $row->uid;
+                $votes['name'] = $row->name;
                 $votes['created_at'] = $row->created_at;
                 $voteBlock[]= $votes;
                 $previousVote = $row->vid;
