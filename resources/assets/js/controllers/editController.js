@@ -15,8 +15,6 @@ synco.controller('editController', ['$scope', '$http', '$location', function($sc
 
 		}).error(function(response) {
 			alert("error getting your json");
-		}).then(function(){
-			$location.path('/post/' + id );
 		});
 	
 
