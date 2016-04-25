@@ -14,17 +14,16 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="x in posts">
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
 		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
 		    </td>
-		    <td>{{ x.about.post_score }}</td>
-		    <td>{{ x.about.upvotes }}</td>
-		    <td>{{ x.about.downvotes }}</td>
-		    <td>{{ x.about.title }}</td>
-		    <td>{{ x.about.ptext }}
-		    <td>{{ x.about.num_comments }}
+		    <td>{{ response[0].about.post_score }}</td>
+		    <td>{{ response[0].about.upvotes }}</td>
+		    <td>{{ response[0].about.downvotes }}</td>
+		    <td>{{ response[0].about.title }}</td>
+		    <td>{{ response[0].about.ptext }}
+		    <td>{{ response[0].about.num_comments }}
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>		    
@@ -33,6 +32,5 @@
 		    </td>
 
 
-		</tr>
 	</tbody>
 </table>
