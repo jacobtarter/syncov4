@@ -1,10 +1,11 @@
-synco.controller('editController', ['$scope', '$http', '$location', function($scope, $http, $location) {
+synco.controller('editController', ['$scope', '$http', '$location', '$routeParams' function($scope, $http, $location, $routeParams) {
 
 
 
 
 
-		console.log('viewPost' + id);
+		console.log('viewPost' + $routeParams.id);
+		var id = $routeParams.id;
 
 		$http.get(baseUrl + api + "posts/" + id )
 		.success(function(response){
