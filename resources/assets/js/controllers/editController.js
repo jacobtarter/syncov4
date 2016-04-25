@@ -1,4 +1,4 @@
-synco.controller('editController', ['$scope', '$http', '$location', '$routeParams' function($scope, $http, $location, $routeParams) {
+synco.controller('editController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
 
 
 		var self = this;

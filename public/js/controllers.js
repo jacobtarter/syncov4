@@ -121,7 +121,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 
 }]);
-synco.controller('editController', ['$scope', '$http', '$location', '$routeParams' function($scope, $http, $location, $routeParams) {
+synco.controller('editController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
 
 
 		var self = this;
