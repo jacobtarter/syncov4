@@ -3,8 +3,7 @@ synco.controller('editController', ['$scope', '$http', '$location', function($sc
 
 
 
-$scope.editPost = function(id) 
-	{
+
 		console.log('viewPost' + id);
 
 		$http.get(baseUrl + api + "posts/" + id )
@@ -19,6 +18,6 @@ $scope.editPost = function(id)
 		}).then(function(){
 			$location.path('/post/' + id );
 		});
-	}
+	
 
 	}
