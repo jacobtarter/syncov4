@@ -17,12 +17,12 @@
 		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
 		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
 		    </td>
-		    <td>{{ posts[0].about.post_score }}</td>
-		    <td>{{ posts[0].about.upvotes }}</td>
-		    <td>{{ posts[0].about.downvotes }}</td>
-		    <td>{{ posts[0].about.title }}</td>
-		    <td>{{ posts[0].about.ptext }}</td>
-		    <td>{{ posts[0].about.num_comments }}</td>
+		    <td>{{ epost[0].about.post_score }}</td>
+		    <td>{{ epost[0].about.upvotes }}</td>
+		    <td>{{ epost[0].about.downvotes }}</td>
+		    <td>{{ epost[0].about.title }}</td>
+		    <td>{{ epost[0].about.ptext }}</td>
+		    <td>{{ epost[0].about.num_comments }}</td>
 		    <td>
 		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>		    
