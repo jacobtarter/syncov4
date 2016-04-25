@@ -44,7 +44,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		.success(function(response){
 			alert(baseUrl + api + "posts/" + id);
 			alert(response[0].about.title);
-			$scope.posts = response;
+			$scope.posts = response[0];
 		}).error(function(response) {
 			alert("error getting your json");
 		});
