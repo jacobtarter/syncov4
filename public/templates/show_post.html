@@ -1,4 +1,36 @@
-show_post.html
+<table class="table">
+	
+	<p>SHOW POST PAGE</p>
+
+	<thead>
+		<tr>
+			<th></th>
+			<th>Score</th>
+			<th>Upvotes</th>
+			<th>Downvotes</th>
+			<th>Title</th>
+			<th>Post Text</th>
+			<th>Comments</th>
+		</tr>
+	</thead>
+	<tbody>
+		    <td>
+		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
+		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
+		    </td>
+		    <td>{{ post[0].about.post_score }}</td>
+		    <td>{{ post[0].about.upvotes }}</td>
+		    <td>{{ post[0].about.downvotes }}</td>
+		    <td>{{ post[0].about.title }}</td>
+		    <td>{{ post[0].about.ptext }}</td>
+		    <td>{{ post[0].about.num_comments }}</td>
+		    <td>
+		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
+		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>		    
+		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
+
+		    </td>
 
 
-<p>Hi</p>
+	</tbody>
+</table>
