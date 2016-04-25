@@ -35,26 +35,24 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 		}
 	}
 	
-	
-	$scope.editPost = function(id)
-	{
-		console.log('viewPost' + id);
+	angular.extend($scope, {
+		$scope.editPost = function(id)
+		{
+			console.log('viewPost' + id);
 
-		$http.get(baseUrl + api + "posts/" + id )
-		.success(function(response){
-			alert(baseUrl + api + "posts/" + id);
-			alert(response[0].about.title);
-			$scope.posts = response;
+			$http.get(baseUrl + api + "posts/" + id )
+			.success(function(response){
+				alert(baseUrl + api + "posts/" + id);
+				alert(response[0].about.title);
+				$scope.posts = response;
 
-		}).error(function(response) {
-			alert("error getting your json");
-	}).then(function(){
-		$location.path('/post/' + id );
+			}).error(function(response) {
+				alert("error getting your json");
+			}).then(function(){
+				$location.path('/post/' + id );
+			});
+		}
 	});
-
-		
-		
-	}
 	
 
 	angular.extend($scope, {
