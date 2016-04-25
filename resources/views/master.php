@@ -3,7 +3,7 @@
 <head>
 	<title>Synco</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-	<script>var baseUrl = "{{ url('/') }}/";</script>
+	<script>var baseUrl = "www.synco.xyz";</script>
 	<script>var api = "api/v1/"; </script>
 </head>
 
