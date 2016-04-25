@@ -25,7 +25,7 @@ synco.config(['$routeProvider', '$locationProvider',
 
 		$routeProvider.when('/post/:id', {
 			templateUrl: 'templates/editPost.html',
-			controller: 'userController'
+			controller: 'editController'
 		});
 
 		$routeProvider.otherwise('/');
