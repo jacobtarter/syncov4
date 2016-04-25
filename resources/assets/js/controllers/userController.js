@@ -48,9 +48,9 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 		}).error(function(response) {
 			alert("error getting your json");
-	}).then(function() 
+	}).then(function(){
 		$location.path('/post/' + id );
-	));
+	});
 
 		
 		
