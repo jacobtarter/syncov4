@@ -2,7 +2,7 @@ synco.controller('editController', ['$scope', '$http', '$location', '$routeParam
 
 		$scope.id = $routeParams.id;
 
-		$http.get(baseUrl + api + "posts/" + $scope.id )
+		$http.get("www.synco.xyz/api/v1/posts/" + $scope.id)
 		.success(function(response){
 			$scope.post= response;
 		}).error(function(response) {
