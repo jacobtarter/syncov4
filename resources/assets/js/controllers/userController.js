@@ -36,7 +36,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	}
 	
 	angular.extend($scope, {
-		editPost: function(id) {
+		editPost: function(id) 
 		{
 			console.log('viewPost' + id);
 
@@ -56,7 +56,8 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 	
 
 	angular.extend($scope, {
-		doLogin: function(loginForm) {
+		doLogin: function(loginForm) 
+		{
 			$http({	
 				headers: {
 					'Content-Type': 'application/json'
