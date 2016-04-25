@@ -45,11 +45,12 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 			alert(baseUrl + api + "posts/" + id);
 			alert(response[0].about.title);
 			$scope.posts = response;
+			$location.path('/post/' + id );
 		}).error(function(response) {
 			alert("error getting your json");
 		});
 
-		$location.path('/post/' + id );
+		
 		
 	}
 	
