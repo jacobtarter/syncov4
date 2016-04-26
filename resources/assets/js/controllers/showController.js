@@ -8,7 +8,7 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 		.success(function(response){
 			$scope.post= response;
 			angular.forEach(post.comments, function(nextComment) {
-				angular.forEach(nextComment.ctext, function(ctext)) {
+				angular.forEach(nextComment.ctext, function(ctext) {
 					$scope.comments.push(ctext);
 				}
 			})
