@@ -59,8 +59,23 @@
 
 		    </td>
 
+		    <p>Comments</p>
+		    <tr ng-repeat="x in post[0].comments">
+		    	<tr>
+		    		<th>Posted By</th>
+		    		<th>Comment</th>
+		    		<th>Date</th>
+		    	</tr>
+		    	<tr>
+		    		<th>{{ x.name }}</th>
+		    		<th>{{ x.ctext }}</th>
+		    		<th>{{ x.created_at }}</th
+		    	</tr>
+		    </tr>
+
 
 	</tbody>
+
 
 </table>
 </div>
