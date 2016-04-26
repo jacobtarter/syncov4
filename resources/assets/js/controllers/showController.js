@@ -9,7 +9,7 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 			$scope.post= response;
 			$scope.comments = $scope.post[0].comments;
 			$scope.commentDetails = [];
-			angular.forEach($scope.post.comments, function(nextComment) {
+			angular.forEach($scope.comments, function(nextComment) {
 				angular.forEach(nextComment.ctext, function(ctext) {
 					$scope.commentDetails.push(ctext);
 				});
