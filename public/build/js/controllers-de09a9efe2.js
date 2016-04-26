@@ -141,18 +141,20 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 
 		$scope.id = $routeParams.id;
 		$scope.post = null;
-		$scope.comments = [];
+		$scope.comments = null;
 
 		$http.get(baseUrl + api + "posts/" + $scope.id)
 		.success(function(response){
 			$scope.post= response;
-			$scope.comments = $scope.post[0].comments;
-			$scope.commentDetails = [];
-			angular.forEach($scope.comments, function(nextComment) {
-				
-				$scope.commentDetails.push(nextComment);
-				
-			});
+			
+		}).error(function(response) {
+			alert("error getting your json");
+		});
+
+		$http.get(baseUrl + api + "comments/" + $scope.id)
+		.success(function(response){
+			$scope.comments= response;
+			
 		}).error(function(response) {
 			alert("error getting your json");
 		});

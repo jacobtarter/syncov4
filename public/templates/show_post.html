@@ -29,8 +29,8 @@
           </ul>
           <div class ="panel panel default">
 
-	<table class= "table topComment">
-		<thead>
+<table class= "table topComment">
+	<thead>
 		<tr>
 			<th></th>
 			<th>Score</th>
@@ -59,38 +59,23 @@
 
 		    </td>
 
-		    <p>Comments</p>
-		    <tr ng-repeat-start="x in post.comments">
-		    	<td>Comment</td>
-		    </tr>
-		    <tr ng-repeat-end>
-		    	<td>{{ x.ctext }}</td>
-		    </tr>
-
-
 	</tbody>
-	<table class="table">
+</table>
+<table class= "table topComment">
 	<thead>
 		<tr>
-			<th></th>
-			<th>Score</th>
-			<th>Upvotes</th>
-			<th>Downvotes</th>
-			<th>Title</th>
-			<th>Comments</th>
+			<th>Comment</th>
+			
 		</tr>
 	</thead>
-	<tbody>
-		<tr ng-repeat="x in posts.comments">
-		    <td>
-		    	<button class="btn btn-default btn-xs btn-up" >Upvote</button>
-		    	<button class="btn btn-default btn-xs btn-down" >Downvote</button>
-		    </td>
+	<tbody class = "botComment">		
+		<tr ng-repeat="x in comments">
+		    
 		    <td>{{ x.ctext }}</td>
 		    
 		</tr>
 	</tbody>
-</table>
+
 
 
 </table>
