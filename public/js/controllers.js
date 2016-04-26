@@ -149,8 +149,8 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 			angular.forEach(post.comments, function(nextComment) {
 				angular.forEach(nextComment.ctext, function(ctext) {
 					$scope.comments.push(ctext);
-				}
-			})
+				});
+			});
 		}).error(function(response) {
 			alert("error getting your json");
 		});
