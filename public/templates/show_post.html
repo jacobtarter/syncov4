@@ -53,10 +53,8 @@
 		    <td>{{ post[0].about.ptext }}</td>
 		    <td>{{ post[0].about.num_comments }}</td>
 		    <td>
-		    	<button class="btn btn-default btn-xs btn-view" ng-click="viewPost(x.about.id)">View/Comment</button>
 		    	<button class="btn btn-default btn-xs btn-edit" ng-click="editPost(x.about.id)">Edit</button>
 		    	<button class="btn btn-danger btn-xs btn-delete" ng-click="confirmDelete(x.about.id)">Delete</button>
-
 		    </td>
 
 	</tbody>
@@ -64,14 +62,20 @@
 <table class= "table topComment">
 	<thead>
 		<tr>
+			<th>The Comments</th>
+		</tr>
+		<tr>
+			<th>User</th>
 			<th>Comment</th>
-			
+			<th>Date</th>
 		</tr>
 	</thead>
 	<tbody class = "botComment">		
 		<tr ng-repeat="x in comments">
 		    
+		    <td>{{ x.name }}</td>
 		    <td>{{ x.ctext }}</td>
+		    <td>{{ x.created_at }}</td>
 		    
 		</tr>
 	</tbody>
