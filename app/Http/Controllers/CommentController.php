@@ -25,4 +25,5 @@ class CommentController extends Controller
 	            ";
 	    $DATA = (array)DB::select( "$WHERE" );
 	    echo json_encode($DATA);
+	}
 }
