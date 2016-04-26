@@ -8,7 +8,7 @@ synco.controller('userController', ['$scope', '$http', '$location', function($sc
 
 	//Get Posts Method
 
-	$http.get($scope.API_URL + "posts")
+	$http.get(baseUrl + api + "posts")
 		.success(function(response){
 			$scope.posts = response;
 		});
