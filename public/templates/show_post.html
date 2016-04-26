@@ -60,15 +60,11 @@
 		    </td>
 
 		    <p>Comments</p>
-		    <tr ng-repeat="x in post[0].comments">
-		    	<tr>
-		    		<th>Posted By</th>
-		    		<th>Comment</th>
-		    		<th>Date</th>
-		    	</tr>
-		    	<tr>
-		    		<th>{{ x.ctext }}</th>
-		    	</tr>
+		    <tr ng-repeat-start="x in post.comments">
+		    	<td>Comment</td>
+		    </tr>
+		    <tr ng-repeat-end>
+		    	<td>{{ x.ctext }}</td>
 		    </tr>
 
 
