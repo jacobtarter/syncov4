@@ -126,7 +126,7 @@ synco.controller('editController', ['$scope', '$http', '$location', '$routeParam
 		$scope.id = $routeParams.id;
 		$scope.post = null;
 
-		alert(baseUrl + api + "posts/" + $scope.id);
+		//alert(baseUrl + api + "posts/" + $scope.id);
 
 		$http.get(baseUrl + api + "posts/" + $scope.id)
 		.success(function(response){
@@ -140,8 +140,9 @@ synco.controller('editController', ['$scope', '$http', '$location', '$routeParam
 synco.controller('showController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams) {
 
 		$scope.id = $routeParams.id;
+		$scope.post = null;
 
-		$http.get(baseUrl + api + "posts/" + $scope.id )
+		$http.get(baseUrl + api + "posts/" + $scope.id)
 		.success(function(response){
 			$scope.post= response;
 		}).error(function(response) {
