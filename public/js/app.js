@@ -23,6 +23,11 @@ synco.config(['$routeProvider', '$locationProvider',
 			controller: 'userController'
 		});
 
+		$routeProvider.when('comment/:id', {
+			templateUrl: 'templates/comment.html',
+			controller: 'commentController'
+		});
+
 		$routeProvider.when('/post/:id', {
 			templateUrl: 'templates/editPost.html',
 			controller: 'editController'

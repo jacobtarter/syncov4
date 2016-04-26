@@ -8,7 +8,7 @@ use Illuminate\Support\FacadesValidator;
 
 use App\Http\Requests;
 
-use App\Post;
+use App\Comment;
 
 use DB;
 
@@ -26,4 +26,17 @@ class CommentController extends Controller
 	    $DATA = (array)DB::select( "$WHERE" );
 	    echo json_encode($DATA);
 	}
+
+	 public function store(Request $request)
+    {
+       
+        $this->validate($request, array(
+            'ctext' => 'required'
+        ));
+
+        $comment = new Comment;
+        
+        $post->ctext = $request->input('ctext');
+        $post->save();
+    }
 }
