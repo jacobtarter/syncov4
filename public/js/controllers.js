@@ -146,7 +146,7 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 		$http.get(baseUrl + api + "posts/" + $scope.id)
 		.success(function(response){
 			$scope.post= response;
-			angular.forEach(post.comments, function(nextComment) {
+			angular.forEach($scope.post.comments, function(nextComment) {
 				angular.forEach(nextComment.ctext, function(ctext) {
 					$scope.comments.push(ctext);
 				});
