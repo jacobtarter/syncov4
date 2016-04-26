@@ -23,7 +23,7 @@ synco.config(['$routeProvider', '$locationProvider',
 			controller: 'userController'
 		});
 
-		$routeProvider.when('comment/:id', {
+		$routeProvider.when('/comment/:id', {
 			templateUrl: 'templates/comment.html',
 			controller: 'commentController'
 		});
