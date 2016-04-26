@@ -125,7 +125,9 @@ synco.controller('editController', ['$scope', '$http', '$location', '$routeParam
 
 		$scope.id = $routeParams.id;
 
-		$http.get(baseUrl + api + "posts/" + $scope.id )
+		alert(baseUrl + api + "posts/" + scope.id);
+
+		$http.get(baseUrl + api + "posts/" + $scope.id)
 		.success(function(response){
 			$scope.post= response;
 		}).error(function(response) {
