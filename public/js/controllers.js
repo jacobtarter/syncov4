@@ -149,9 +149,9 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 			$scope.comments = $scope.post[0].comments;
 			$scope.commentDetails = [];
 			angular.forEach($scope.comments, function(nextComment) {
-				angular.forEach(nextComment.ctext, function(ctext) {
-					$scope.commentDetails.push(ctext);
-				});
+				
+				$scope.commentDetails.push(nextComment);
+				
 			});
 		}).error(function(response) {
 			alert("error getting your json");
