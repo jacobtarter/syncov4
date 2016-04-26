@@ -21,7 +21,7 @@ synco.controller('showController', ['$scope', '$http', '$location', '$routeParam
 		});
 
 
-		$scope.editPost = function(id) 
+		$scope.addComment = function(id) 
 		{
 			console.log('comment' + id);
 
